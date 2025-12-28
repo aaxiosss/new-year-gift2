@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>С Новым Годом!</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Marck+Script&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Снежинки -->
+    <div class="snowflakes">
+        <div class="snowflake">❅</div>
+        <div class="snowflake">❅</div>
+        <div class="snowflake">❆</div>
+        <div class="snowflake">❅</div>
+        <div class="snowflake">❆</div>
+        <div class="snowflake">❅</div>
+    </div>
+
+    <div class="container">
+        <!-- Шапка -->
+        <header>
+            <h1><span class="highlight">С новым годом, котенок!</span></h1>
+            <div class="jackpot">
+                <i class="fas fa-gem"></i>
+                <p class="subtitle">Ты сорвала джекпот этой лотереи!</p>
+                <i class="fas fa-gem"></i>
+            </div>
+            <p class="instruction">Выбери дизайн своего подарка:</p>
+        </header>
+
+        <!-- Основной контент -->
+        <main>
+            <!-- Вариант 1 -->
+            <div class="gift-option">
+                <div class="option-header">
+                    <input type="checkbox" id="option1" name="gift" value="Вариант 1">
+                    <label for="option1" class="option-title">
+                        <i class="fas fa-heart"></i> Вариант 1
+                    </label>
+                </div>
+                <div class="images">
+                    <!-- Ваши фото -->
+                    <img src="https://i.ibb.co/B5r33jzp/photo1.jpg" alt="Подарок 1 фото 1">
+                    <img src="https://i.ibb.co/NdvHwzP7/photo2.jpg" alt="Подарок 1 фото 2">
+                </div>
+            </div>
+
+            <!-- Вариант 2 -->
+            <div class="gift-option">
+                <div class="option-header">
+                    <input type="checkbox" id="option2" name="gift" value="Вариант 2">
+                    <label for="option2" class="option-title">
+                        <i class="fas fa-star"></i> Вариант 2
+                    </label>
+                </div>
+                <div class="images">
+                    <!-- Ваши фото -->
+                    <img src="https://i.ibb.co/s9pjBdzQ/photo3.jpg" alt="Подарок 2 фото 1">
+                    <img src="https://i.ibb.co/XZJfzwHC/photo4.jpg" alt="Подарок 2 фото 2">
+                    <img src="https://i.ibb.co/XkLbKZPX/photo5.jpg" alt="Подарок 2 фото 3">
+                </div>
+            </div>
+
+            <!-- Вариант 3 -->
+            <div class="gift-option">
+                <div class="option-header">
+                    <input type="checkbox" id="option3" name="gift" value="Вариант 3">
+                    <label for="option3" class="option-title">
+                        <i class="fas fa-moon"></i> Вариант 3
+                    </label>
+                </div>
+                <div class="images">
+                    <!-- Ваши фото -->
+                    <img src="https://i.ibb.co/ZbXvN7b/photo6.jpg" alt="Подарок 3 фото 1">
+                    <img src="https://i.ibb.co/RkN0JH3z/photo7.jpg" alt="Подарок 3 фото 2">
+                </div>
+            </div>
+
+            <!-- Вариант 4 -->
+            <div class="gift-option">
+                <div class="option-header">
+                    <input type="checkbox" id="option4" name="gift" value="Вариант 4">
+                    <label for="option4" class="option-title">
+                        <i class="fas fa-gift"></i> Вариант 4
+                    </label>
+                </div>
+                <div class="images">
+                    <!-- Ваши фото -->
+                    <img src="https://i.ibb.co/twntTvTF/photo8.jpg" alt="Подарок 4 фото">
+                </div>
+            </div>
+
+            <!-- Вариант 5 -->
+            <div class="gift-option">
+                <div class="option-header">
+                    <input type="checkbox" id="option5" name="gift" value="Вариант 5">
+                    <label for="option5" class="option-title">
+                        <i class="fas fa-crown"></i> Вариант 5
+                    </label>
+                </div>
+                <div class="images">
+                    <!-- Ваши фото -->
+                    <img src="https://i.ibb.co/b5ywmdbL/photo9.jpg" alt="Подарок 5 фото 1">
+                    <img src="https://i.ibb.co/bgzXKNZh/photo10.jpg" alt="Подарок 5 фото 2">
+                    <img src="https://i.ibb.co/spjtkvkR/photo11.jpg" alt="Подарок 5 фото 3">
+                </div>
+            </div>
+
+            <!-- Кнопка отправки -->
+            <div class="button-container">
+                <button id="submitBtn">
+                    <i class="fas fa-paper-plane"></i> 
+                    <span>Отправить мой выбор</span>
+                    <i class="fas fa-snowflake spinning"></i>
+                </button>
+            </div>
+
+            <!-- Сообщение об успехе -->
+            <div id="successMessage" class="hidden">
+                <div class="success-box">
+                    <i class="fas fa-check-circle"></i>
+                    <h2>Твой выбор сохранен! ❤️</h2>
+                    <p>Уведомление отправлено. Скоро свяжемся!</p>
+                    <p class="wish">С Новым Годом, моя дорогая!</p>
+                    <div class="telegram-info">
+                        <i class="fab fa-telegram"></i>
+                        <p>Сообщение отправлено в Telegram</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Сообщение об ошибке -->
+            <div id="errorMessage" class="hidden">
+                <div class="error-box">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <h2>Что-то пошло не так</h2>
+                    <p>Пожалуйста, свяжись со мной напрямую и расскажи о своем выборе!</p>
+                    <p class="contact-info">Твой выбор: <span id="selectedOptionsText"></span></p>
+                </div>
+            </div>
+        </main>
+
+        <!-- Подвал -->
+        <footer>
+            <p>С любовью, твой Дед Мороз 🎅</p>
+            <div class="footer-icons">
+                <span>🎄</span>
+                <span>🎁</span>
+                <span>❄️</span>
+                <span>🌟</span>
+                <span>🦌</span>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Конфигурация Telegram бота
+        const TELEGRAM_BOT_TOKEN = '7768833842:AAHu7dJSsbqlPgX5PQ3VSl-KDnQEH9TVrwI';
+        const TELEGRAM_CHAT_ID = '2015757741'; // Нужно заменить на ваш Chat ID
+
+        // Элементы
+        const submitBtn = document.getElementById('submitBtn');
+        const successMessage = document.getElementById('successMessage');
+        const errorMessage = document.getElementById('errorMessage');
+        const selectedOptionsText = document.getElementById('selectedOptionsText');
+
+        // Функция для получения выбранных вариантов
+        function getSelectedOptions() {
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+            const selected = Array.from(checkboxes).map(cb => cb.value);
+            return selected;
+        }
+
+        // Функция отправки в Telegram
+        async function sendToTelegram(selectedOptions) {
+            // Если Chat ID не указан, используем тестовый режим
+            if (TELEGRAM_CHAT_ID === 'YOUR_CHAT_ID') {
+                console.warn('Chat ID не указан! Использую тестовый режим.');
+                console.log('Выбранные варианты:', selectedOptions);
+                return { ok: true, test: true };
+            }
+
+            const message = `🎄 *НОВОГОДНИЙ ВЫБОР* 🎄\n\n` +
+                           `💌 *Выбраны варианты:*\n${selectedOptions.map((opt, i) => `  ${i+1}. ${opt}`).join('\n')}\n\n` +
+                           `📅 *Дата:* ${new Date().toLocaleString('ru-RU')}\n` +
+                           `✨ *Всего выбрано:* ${selectedOptions.length} вариант(а/ов)\n\n` +
+                           `🎅 *С Новым Годом, котенок!* ❤️`;
+            
+            const url = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
+            
+            try {
+                const response = await fetch(url, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        chat_id: TELEGRAM_CHAT_ID,
+                        text: message,
+                        parse_mode: 'Markdown'
+                    })
+                });
+                
+                const data = await response.json();
+                return data;
+            } catch (error) {
+                console.error('Ошибка отправки в Telegram:', error);
+                return { ok: false, error: error.message };
+            }
+        }
+
+        // Функция для снежинок
+        function createSnow() {
+            const container = document.querySelector('.container');
+            for (let i = 0; i < 30; i++) {
+                const snow = document.createElement('div');
+                snow.className = 'snow-particle';
+                snow.style.left = Math.random() * 100 + '%';
+                snow.style.animationDelay = Math.random() * 3 + 's';
+                snow.style.fontSize = Math.random() * 15 + 10 + 'px';
+                snow.innerHTML = ['❄', '❅', '❆'][Math.floor(Math.random() * 3)];
+                container.appendChild(snow);
+                
+                setTimeout(() => {
+                    if (snow.parentNode) {
+                        snow.remove();
+                    }
+                }, 5000);
+            }
+        }
+
+        // Функция для конфетти
+        function createConfetti() {
+            const container = document.querySelector('.container');
+            const colors = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff', '#ff9900'];
+            
+            for (let i = 0; i < 50; i++) {
+                const confetti = document.createElement('div');
+                confetti.className = 'confetti';
+                confetti.style.left = Math.random() * 100 + '%';
+                confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                confetti.style.width = Math.random() * 10 + 5 + 'px';
+                confetti.style.height = Math.random() * 10 + 5 + 'px';
+                confetti.style.borderRadius = '50%';
+                confetti.style.position = 'absolute';
+                confetti.style.opacity = '0.8';
+                confetti.style.zIndex = '100';
+                confetti.style.top = '-20px';
+                confetti.style.animation = `fall ${Math.random() * 2 + 2}s linear forwards`;
+                
+                container.appendChild(confetti);
+                
+                setTimeout(() => {
+                    if (confetti.parentNode) {
+                        confetti.remove();
+                    }
+                }, 4000);
+            }
+        }
+
+        // Обработчик кнопки
+        submitBtn.addEventListener('click', async function() {
+            const selectedOptions = getSelectedOptions();
+            
+            if (selectedOptions.length === 0) {
+                alert('💝 Пожалуйста, выбери хотя бы один вариант подарка!');
+                return;
+            }
+
+            // Показываем загрузку
+            const originalText = this.innerHTML;
+            this.innerHTML = '<i class="fas fa-spinner fa-spin"></i><span>Отправляю в Telegram...</span>';
+            this.disabled = true;
+
+            try {
+                // Отправляем в Telegram
+                const result = await sendToTelegram(selectedOptions);
+                
+                if (result.ok) {
+                    // Успех
+                    successMessage.classList.remove('hidden');
+                    this.style.display = 'none';
+                    
+                    // Анимации
+                    createSnow();
+                    createConfetti();
+                    
+                    // Прокрутка к сообщению
+                    successMessage.scrollIntoView({ behavior: 'smooth' });
+                    
+                    // Сохраняем в localStorage на всякий случай
+                    localStorage.setItem('newYearChoice', JSON.stringify({
+                        options: selectedOptions,
+                        date: new Date().toISOString(),
+                        sentToTelegram: true
+                    }));
+                    
+                    console.log('✅ Успешно отправлено! Выбрано:', selectedOptions);
+                    
+                } else {
+                    // Ошибка Telegram
+                    throw new Error(result.description || 'Ошибка Telegram');
+                }
+                
+            } catch (error) {
+                console.error('❌ Ошибка:', error);
+                
+                // Показываем сообщение об ошибке
+                selectedOptionsText.textContent = selectedOptions.join(', ');
+                errorMessage.classList.remove('hidden');
+                successMessage.classList.add('hidden');
+                
+                // Возвращаем кнопку
+                this.innerHTML = originalText;
+                this.disabled = false;
+                
+                // Прокрутка к ошибке
+                errorMessage.scrollIntoView({ behavior: 'smooth' });
+                
+                // Сохраняем в localStorage
+                localStorage.setItem('newYearChoice', JSON.stringify({
+                    options: selectedOptions,
+                    date: new Date().toISOString(),
+                    error: error.message
+                }));
+            }
+        });
+
+        // Восстановление выбора при перезагрузке страницы
+        document.addEventListener('DOMContentLoaded', function() {
+            const saved = localStorage.getItem('newYearChoice');
+            if (saved) {
+                try {
+                    const data = JSON.parse(saved);
+                    console.log('📝 Восстановлен предыдущий выбор:', data.options);
+                    
+                    // Можно восстановить галочки, если нужно
+                    // data.options.forEach(optionValue => {
+                    //     const checkbox = document.querySelector(`input[value="${optionValue}"]`);
+                    //     if (checkbox) checkbox.checked = true;
+                    // });
+                } catch (e) {
+                    console.error('Ошибка восстановления:', e);
+                }
+            }
+            
+            // Анимация снежинок фона
+            const snowflakes = document.querySelectorAll('.snowflake');
+            snowflakes.forEach((flake, index) => {
+                flake.style.left = `${Math.random() * 100}%`;
+                flake.style.animationDelay = `${Math.random() * 5}s`;
+                flake.style.fontSize = `${Math.random() * 15 + 10}px`;
+            });
+        });
+    </script>
+</body>
+</html>
